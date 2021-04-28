@@ -1,0 +1,12 @@
+@import "../../styles.scss";
+
+$topToolBarHeight: 50px;
+$tabsHeight: 48px;
+
+.favorites-comp {
+    padding: 20px;
+    padding-bottom: 0;
+    width: 100%;
+    height: calc(100vh - #{$topToolBarHeight} - #{$tabsHeight} - 1px);
+    overflow: auto;
+}

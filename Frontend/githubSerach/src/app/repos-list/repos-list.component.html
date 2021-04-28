@@ -1,0 +1,33 @@
+<div class="repos-comp">
+
+    <div *ngIf="!(reposList?.length)" class="no-records">
+
+    </div>
+
+    <div *ngIf="reposList?.length" class="records-section">
+
+        <mat-list class="repos-list">
+            <div mat-subheader>Repositories</div>
+            <mat-list-item *ngFor="let repo of reposList" class="repo-option">
+                <div mat-line>{{repo.fullName}}</div>
+                <div mat-line> {{repo.description}} </div>
+                <div mat-line> {{repo.url}}</div>
+                <div mat-line> {{repo.createdAd | date: 'dd/MM/yyyy HH:mm'}}</div>
+                <div class="add-remove-favorites-area">
+                    <button *ngIf="!repo.favorite" mat-stroked-button class="add-to-favorite-button"
+                        (click)="addToFavorite($event, repo)">
+                        <mat-icon class="favorite-icon">favorite_border</mat-icon>
+                        Add to favorites
+                    </button>
+                    <button *ngIf="repo.favorite" mat-stroked-button class="remove-favorite-button"
+                        (click)="removeFromFavoritesClicked($event, repo)">
+                        <mat-icon class="favorite-icon">favorite</mat-icon>
+                        Remove favorite
+                    </button>
+                </div>
+                <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-list>
+
+    </div>
+</div>

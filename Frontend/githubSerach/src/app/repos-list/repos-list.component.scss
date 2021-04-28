@@ -1,0 +1,14 @@
+.repos-comp {
+    .records-section {
+        .repos-list {
+            width: 100%;
+            .repo-option {
+                cursor: pointer;
+                .add-to-favorite-button,
+                .remove-favorite-button {
+                    color: #db0025;
+                }
+            }
+        }
+    }
+}

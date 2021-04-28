@@ -1,0 +1,27 @@
+@import "../../styles.scss";
+
+$topToolBarHeight: 50px;
+$tabsHeight: 48px;
+
+.search-comp {
+    padding: 20px;
+    padding-bottom: 0;
+    width: 100%;
+    height: calc(100vh - #{$topToolBarHeight} - #{$tabsHeight} - 1px);
+    overflow: auto;
+    .search-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .search-icon {
+            color: #929292;
+        }
+        .clear-button {
+            visibility: hidden;
+            color: #929292;
+            &.visible {
+                visibility: visible;
+            }
+        }
+    }
+}
